@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Top Donors" icon-name="standard:reward">
+        <div class="slds-var-m-around_medium">
+            <template if:true={topContributors.length}>
+                <template for:each={topContributors} for:item="contributor">
+                    <table key={contributor.name} class="slds-m-left_x-large">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <lightning-icon icon-name="standard:thanks" size="x-small">
+
+                                    </lightning-icon> 
+                                    <strong class="slds-m-left_x-small">  {contributor.displayName} </strong>
+                                </td>
+                                <td style="color: #4682B4; width:40%; font-size:medium"><strong>${contributor.totalDonation}</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </template>
+            </template>
+            <template if:true={error}>
+                No Contributors found...
+            </template>
+        </div>
+    </lightning-card>
+</template>

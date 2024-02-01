@@ -1,0 +1,37 @@
+<template> 
+    <lightning-card title = "Donation Campaign Details" icon-name="custom:custom15">
+        <div class="slds-var-m-around_medium"> 
+            <lightning-record-view-form
+                object-api-name={objectName}
+                record-id={recordId}>
+                <div class ="slds-grid slds-gutters">
+
+                    <div class="slds-col">
+                        <lightning-output-field
+                        field-name={fields.name}>
+                    </lightning-output-field>
+                    <lightning-output-field
+                        field-name={fields.endDate}>
+                    </lightning-output-field>
+                    </div>
+
+                    <div class="slds-col">
+                        <lightning-output-field
+                        field-name={fields.targetDonation}>
+                    </lightning-output-field>
+                    <lightning-output-field
+                        field-name={fields.achieveDonation}>
+                    </lightning-output-field>
+                    <lightning-output-field
+                    field-name={fields.remainingDonation}>
+                </lightning-output-field>
+
+                    </div>
+                </div>
+
+
+            </lightning-record-view-form>
+
+        </div>
+    </lightning-card>
+</template>
