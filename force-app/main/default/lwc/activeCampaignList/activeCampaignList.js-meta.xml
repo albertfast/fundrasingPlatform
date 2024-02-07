@@ -3,12 +3,18 @@
     <apiVersion>56.0</apiVersion>
     <isExposed>true</isExposed>
     <targets>
-        <target>lightning__HomePage</target>
         <target>lightning__RecordPage</target>
         <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
         <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
         <target>lightningCommunity__Page_Layout</target>
         <target>lightningCommunity__Theme_Layout</target>
-        <target>lightningCommunity__Default</target>
     </targets>
 </LightningComponentBundle>
+
+
+{lpurl}?utm_source=google&utm_medium=
+cpc&utm_campaign= your_campaign_name&utm_content
+=
+ad_variant1

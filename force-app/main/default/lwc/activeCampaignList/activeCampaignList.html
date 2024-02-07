@@ -1,0 +1,35 @@
+<template>
+    <lightning-card if:true={campaignList}>
+        <div>
+            
+            <c-custom-slider
+            slides-data={campaignList}
+            custom-height="400px"
+            custom-width="100%"
+            auto-scroll ="true"
+            hide-navigation-buttons ="false"
+            hide-navigation-dots = "false"
+            onselectedcampaign={openCampaignDetail}
+            ></c-custom-slider>
+        </div>
+        
+        <template if:true={isOpenCampaignModel}>
+            <section role="dialog" tabindex="-1"  class="slds-modal slds-fade-in-open"  style="width: 50%;
+            padding: 10% 20% 0 10%;">
+               <div class="slds-theme_shade slds-theme_alert modalBox">
+                   <header class="slds-modal__header slds-border_none">
+                       <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse closeModel" title="Close" onclick={CloseModal}>
+                          <lightning-icon icon-name="utility:close"
+                             alternative-text="close"
+                             variant="success"
+                             size="small" ></lightning-icon>
+                          <span class="slds-assistive-text">Close</span>
+                       </button>
+                       <h2 id="modal-heading-02" class="slds-text-heading_medium">{cmp.heading}</h2>
+                    </header>
+                   <c-show-campaign-details record-id={cmp.id} object-api-name="Campaign"></c-show-campaign-details >
+               </div>
+           </section>
+       </template>
+    </lightning-card>
+    </template>
