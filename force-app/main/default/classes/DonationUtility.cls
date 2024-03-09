@@ -5,7 +5,7 @@ public without sharing class DonationUtility {
                 FROM Account 
                 WHERE IsPersonAccount=true
                 ORDER BY Total_Donation__c DESC
-                LIMIT 3];
+                LIMIT 10];
     }
     @AuraEnabled(cacheable=true)
     public static List<Campaign> fetchCampaigns(){
@@ -19,4 +19,4 @@ public without sharing class DonationUtility {
             
         }
     }
-}
+} 

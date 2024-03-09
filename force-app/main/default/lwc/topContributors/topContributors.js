@@ -19,3 +19,4 @@ export default class TopContributors extends LightningElement {
         return [];
     }
 }
+

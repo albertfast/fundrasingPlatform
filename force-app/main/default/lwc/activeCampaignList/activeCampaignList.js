@@ -5,7 +5,7 @@ export default class activeCampaignList extends LightningElement {
     
     @track campaignList;
     isOpenCampaignModel = false;
-    cmp;
+    @track cmp;
     campaignId;
 
     connectedCallback() {
@@ -37,6 +37,7 @@ export default class activeCampaignList extends LightningElement {
         const index = event.detail;
         console.log(event.detail);
         this.cmp = this.campaignList[index-1];
+        console.log("CMP ==> "+ JSON.stringify(this.cmp));
     }
 
     CloseModal(){
